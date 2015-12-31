@@ -23,17 +23,18 @@ public class Loan {
 	private int paymentFrequency, compoundingFrequency;
 	
 	// used for computations
-	private double interestMultiplier;
-	private int paymentsPerCompounding;
-	private int periods;
-	private double amountRemaining;
-	
+	private double interestMultiplier;	// (1 + interest / 100)
+	private int paymentsPerCompounding; 
+	//private int periods;
+	private double amountRemaining;		// used when computing the total paid
 	
 	// computations based on input data
 	private double total, paymentAmount;
 	
 	private final int MONTHS_PER_YEAR = 12;
 	
+	/** Default constructor.
+	 */
 	Loan() {
 		
 		loanAmount = 0;
@@ -43,29 +44,56 @@ public class Loan {
 		interestMultiplier = 1;
 	}
 	
+	/**
+	 * Returns the payment amount that needs to be paid periodically to pay off the loan in the given term.
+	 * 
+	 * @return The payment amount.
+	 */
 	public double getPaymentAmount() {
 		return paymentAmount / paymentsPerCompounding;
 	}
 	
+	/**
+	 * Returns the total amount that will be paid to pay off the loan in the given term.
+	 * 
+	 * @return The total that will be paid over the life of the loan.
+	 */
 	public double getTotalPaid() {
 		return total;
 	}
 	
+	/**
+	 * Sets the amount of the loan to the passed in value.
+	 * 
+	 * @param amount The amount of the loan.
+	 */
 	public void setAmount(double amount) {
 		this.loanAmount = amount;
 	}
 	
+	/**
+	 * Sets the term of the loan to the passed in years and months.
+	 * 
+	 * @param years The years of the loan term.
+	 * @param months The months of the loan term.
+	 */
 	public void setLoanTerm(int years, int months) {
 		
 		this.loanTermYears = years;
 		this.loanTermMonths = months;
 		
 		// periods = # of months of loan term
-		this.periods = loanTermYears * MONTHS_PER_YEAR + loanTermMonths;
+		//this.periods = loanTermYears * MONTHS_PER_YEAR + loanTermMonths;
 	}
 	
-	
+	/**
+	 * Sets the frequency of the payments that will be made throughout a year to payoff the loan to
+	 * the passed in string.
+	 * 
+	 * @param freq Frequency of the payments that will be made throughout a year to payoff the loan.
+	 */
 	public void setPaymentFrequency(String freq) {
+		
 		this.payFreq = freq;
 		
 		switch(freq) {
@@ -79,8 +107,14 @@ public class Loan {
 		}
 		
 	}
-	
+
+	/**
+	 * Sets the frequency of the compounding done on the loan in a given year to the passed in string.
+	 * 
+	 * @param freq Frequency of the compounding done on the loan in a given year.
+	 */
 	public void setCompoundingFrequency(String freq) {
+		
 		this.compFreq = freq;
 		
 		switch(freq) {
@@ -181,9 +215,6 @@ public class Loan {
 	 * @return The value for the denominator in the equation used by the compute() method.
 	 */
 	private double getDenominator() {
-		
-		// value of (1 + interest rate)
-		//double periodicIncrement = (interestRate / 100) + 1;
 		
 		double denominator = 1;
 		for(int period = 1; period < loanTermYears; period++)

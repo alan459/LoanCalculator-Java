@@ -73,7 +73,7 @@ public class LoanCalc {
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		frame.setSize(580, 400);
+		frame.setSize(610, 400);
 		frame.getContentPane().setLayout(null);
 		
 		JLabel lblLoanAmount = new JLabel("Loan Amount");
@@ -99,7 +99,7 @@ public class LoanCalc {
 		lblLoanTerm.setBounds(59, 76, 66, 27);
 		frame.getContentPane().add(lblLoanTerm);
 		
-		JLabel lblPaymentFrequency = new JLabel("Payment Frequency");
+		JLabel lblPaymentFrequency = new JLabel("Payments Made");
 		lblPaymentFrequency.setBounds(59, 163, 140, 25);
 		frame.getContentPane().add(lblPaymentFrequency);
 		
@@ -165,7 +165,7 @@ public class LoanCalc {
 		
 		frame.getContentPane().add(comboBoxPayFreq);
 		
-		JLabel lblCompoundingFrequency = new JLabel("Compounding Frequency");
+		JLabel lblCompoundingFrequency = new JLabel("Compounding ");
 		lblCompoundingFrequency.setBounds(59, 203, 140, 25);
 		frame.getContentPane().add(lblCompoundingFrequency);
 		
