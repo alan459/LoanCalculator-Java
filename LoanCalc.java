@@ -21,6 +21,15 @@ import com.jgoodies.forms.layout.FormSpecs;
 import com.jgoodies.forms.layout.RowSpec;
 import javax.swing.JComboBox;
 
+/**
+ * Java swing loan application. 
+ * Takes in input for loan amount, loan term, interest rate, payment frequency, compounding frequency.
+ * Computes the payments that need to be made to payoff the loan in the given loan term and the total
+ * that will be paid over the life of the loan.
+ * 
+ * @author Alan
+ *
+ */
 public class LoanCalc {
 
 	private JFrame frame;
