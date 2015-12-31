@@ -114,7 +114,7 @@ public class LoanCalc {
 		loanYears.setColumns(10);
 		frame.getContentPane().add(loanYears);
 		
-		JLabel lblPeriodicPayments = new JLabel("Periodic Payments");
+		JLabel lblPeriodicPayments = new JLabel("Payments will be ");
 		lblPeriodicPayments.setBounds(59, 319, 114, 27);
 		frame.getContentPane().add(lblPeriodicPayments);
 		
@@ -129,7 +129,7 @@ public class LoanCalc {
 		frame.getContentPane().add(textTotalPayments);
 		
 		JButton btnCompute = new JButton("Compute\nTotals");
-		btnCompute.setBounds(450, 15, 122, 227);
+		btnCompute.setBounds(430, 20, 122, 227);
 		btnCompute.setBackground(Color.PINK);
 		btnCompute.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
