@@ -3,7 +3,8 @@ import javax.swing.*;
 
 
 /****************************************************************************************************
-* An interactive interface to interact with a hospital database.
+* The main JFrame class to hold the GUI objects displayed to the user for interacting with the backend
+* Loan.java class to perform all computations on input and feedback output.
 ****************************************************************************************************/
 public class Loan_Calculator_Frame extends JFrame
 {
@@ -44,8 +45,8 @@ public class Loan_Calculator_Frame extends JFrame
 
 
     /******************************************************************************************
-    * Creates a jpanel with the frame displaying the main menu options and sets it as the 
-    * main screen.
+    * Creates a jpanel with the frame displaying the background panel which will itself hold
+    * whatever the current screen is.
     ******************************************************************************************/
     public void createMainWindow()
     {

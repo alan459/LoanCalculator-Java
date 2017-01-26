@@ -4,7 +4,7 @@ import java.awt.event.*;
 
 
 /*****************************************************************************************************
-* Represents an instance of a main menu to display on the JFrame.
+* Represents an instance of the main loan computation screen to display to the user in the JFrame.
 *****************************************************************************************************/
 public class Loan_Screen extends JPanel 
 {

@@ -4,19 +4,20 @@ import java.awt.event.*;
 
 
 /*****************************************************************************************************
-* Represents an instance of a main menu to display on the JFrame.
+* Represents an instance of a background on the JFrame to be the main layout container to hold items
+* displayed to the user.
 *****************************************************************************************************/
 public class Background_Panel extends JPanel 
 {
 	/* Pointer to the main java window to access its get() methods for other panels */
 	protected JFrame outerFrame;
 
-	/* Panels displaying different options to the user */
+	/* Current Screen displayed to the user */
 	private JPanel currentScreen;
 
 
 	/*********************************************************************************
-	* Main constructor used when creating a main menu.
+	* Main constructor used when creating a the background panel.
 	*********************************************************************************/
 	public Background_Panel(JFrame frame) 
 	{
@@ -47,4 +48,4 @@ public class Background_Panel extends JPanel
 
 
 
-} // end Welcome_Screen class
+} // end Background_Panel class
