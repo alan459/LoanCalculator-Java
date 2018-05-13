@@ -1,3 +1,3 @@
 # LoanCalculator-Java
 
-Rough Draft of code for a loan calculator program, currently at minimum viable product stage
+Rough draft of code for a loan calculator program, mostly for my experimenting with designing a GUI in java.
